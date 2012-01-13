@@ -11,5 +11,12 @@
 
     <artifactId>splitter-aggregator</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>l8mdv-si-samples</groupId>
+            <artifactId>sample-messaging</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

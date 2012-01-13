@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/async-channels/async-channels.iml" filepath="$PROJECT_DIR$/async-channels/async-channels.iml" />
       <module fileurl="file://$PROJECT_DIR$/l8mdv-si-samples.iml" filepath="$PROJECT_DIR$/l8mdv-si-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parallel-service-execution/parallel-service-execution.iml" filepath="$PROJECT_DIR$/parallel-service-execution/parallel-service-execution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-messaging/sample-messaging.iml" filepath="$PROJECT_DIR$/sample-messaging/sample-messaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/splitter-aggregator/splitter-aggregator.iml" filepath="$PROJECT_DIR$/splitter-aggregator/splitter-aggregator.iml" />
     </modules>
   </component>
 </project>

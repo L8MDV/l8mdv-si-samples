@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://com.l8mdv/sa"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://com.l8mdv/sa">
+
+    <xsd:element name="BrokerRequestMessage" type="BrokerRequestMessage"/>
+    <xsd:element name="BrokerResponseMessage" type="BrokerResponseMessage"/>
+
+    <xsd:complexType name="BrokerRequestMessage">
+        <xsd:all>
+            <xsd:element name="BrokerName" type="xsd:string"/>
+            <xsd:element name="BrokerAddress" type="xsd:string"/>
+            <xsd:element name="Stock" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+        </xsd:all>
+    </xsd:complexType>
+
+    <xsd:complexType name="BrokerResponseMessage">
+        <xsd:all>
+            <xsd:element name="BrokerName" type="xsd:string"/>
+            <xsd:element name="Stock" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+            <xsd:element name="BuyPrice" type="xsd:decimal"/>
+            <xsd:element name="SellPrice" type="xsd:decimal"/>
+        </xsd:all>
+    </xsd:complexType>
+
+</xsd:schema>
