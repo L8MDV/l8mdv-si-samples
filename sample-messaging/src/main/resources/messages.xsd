@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://com.l8mdv/sa"
+<xsd:schema xmlns="http://l8mdv.com/sa"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://com.l8mdv/sa">
+            targetNamespace="http://l8mdv.com/sa">
 
-    <xsd:element name="BrokerRequestMessage" type="BrokerRequestMessage"/>
-    <xsd:element name="BrokerResponseMessage" type="BrokerResponseMessage"/>
+    <xsd:element name="BrokerQuoteRequestMessage" type="BrokerQuoteRequestMessage"/>
+    <xsd:element name="BrokerQuoteResponseMessage" type="BrokerQuoteResponseMessage"/>
 
-    <xsd:complexType name="BrokerRequestMessage">
+    <xsd:complexType name="BrokerQuoteRequestMessage">
         <xsd:all>
             <xsd:element name="BrokerName" type="xsd:string"/>
             <xsd:element name="BrokerAddress" type="xsd:string"/>
@@ -15,7 +15,7 @@
         </xsd:all>
     </xsd:complexType>
 
-    <xsd:complexType name="BrokerResponseMessage">
+    <xsd:complexType name="BrokerQuoteResponseMessage">
         <xsd:all>
             <xsd:element name="BrokerName" type="xsd:string"/>
             <xsd:element name="Stock" type="xsd:string"/>
