@@ -15,10 +15,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce97544e-a28f-45e6-9bee-e66b2051edb2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/exception/BrokerException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/bean-refs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd" afterPath="$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml" />
     </list>
     <ignored path="si-samples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,14 +94,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml" />
         <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/message/messages.xsd" />
         <option value="$PROJECT_DIR$/sample-messaging/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/splitter-aggregator/pom.xml" />
         <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerException.java" />
-        <option value="$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd" />
         <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/bean-refs.xml" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml" />
+        <option value="$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd" />
       </list>
     </option>
   </component>
@@ -108,6 +111,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="/usr/share/java/maven-3.0.3" />
+        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -324,6 +328,44 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="l8mdv-si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="splitter-aggregator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -421,6 +463,110 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="l8mdv-si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample-messaging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generated-sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xjc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="l8mdv-si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample-messaging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generated-sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xjc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="l8mdv-si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample-messaging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generated-sources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xjc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="l8mdv-si-samples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample-messaging" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -501,6 +647,9 @@
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.l8mdv.sample.gateway" />
     </key>
@@ -845,16 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample-messaging/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="18" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
@@ -878,24 +1017,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/exception/BrokerException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="149" selection-end="149" vertical-scroll-proportion="0.2764977">
+        <state line="8" column="49" selection-start="184" selection-end="184" vertical-scroll-proportion="0.2764977">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/bean-refs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="88" selection-start="451" selection-end="451" vertical-scroll-proportion="-1.9148936">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="4" selection-start="177" selection-end="177" vertical-scroll-proportion="0.34562212">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="63" selection-start="1292" selection-end="1292" vertical-scroll-proportion="-8.3404255">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="27" selection-start="350" selection-end="350" vertical-scroll-proportion="0.51843315">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="26" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+        <state line="5" column="48" selection-start="236" selection-end="236" vertical-scroll-proportion="-0.8663595">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="55" selection-start="378" selection-end="378" vertical-scroll-proportion="0.5344418">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
