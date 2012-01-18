@@ -4,10 +4,15 @@
        xmlns:int="http://www.springframework.org/schema/integration"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="brokerQuoteRequestSplitter"/>
+    <bean id="xigniteProcessor" class="com.l8mdv.sample.service.impl.XigniteProcessorImpl"/>
+    <bean id="brokerQuoteRequestSplitter" class="com.l8mdv.sample.service.BrokerQuoteRequestSplitter"/>
+    <bean id="brokerRequestToXigniteRequestTransformer"/>
+    <bean id="xigniteResponseToBrokerResponseTransformer"/>
 
-    <executor xmlns="http://www.springframework.org/schema/task" id="service-threads"
-              pool-size="10-15" queue-capacity="25"
+    <executor id="service-threads"
+              xmlns="http://www.springframework.org/schema/task"
+              pool-size="10-15"
+              queue-capacity="25"
               rejection-policy="CALLER_RUNS"/>
 
     <int:channel id="broker-request-error-channel">
@@ -15,9 +20,7 @@
             <int:wire-tap channel="logging-channel"/>
         </int:interceptors>
     </int:channel>
-
     <int:logging-channel-adapter id="logging-channel" level="INFO" log-full-message="true"/>
-
 
     <int:gateway id="brokerRequestGateway"
                  service-interface="com.l8mdv.sample.gateway.BrokerRequestGateway"
@@ -26,17 +29,58 @@
                  default-request-timeout="8000"
                  default-reply-timeout="8000"/>
 
-    <int:channel id="broker-request-service-channel" datatype=""/>
-    <int:splitter id="requestSplitter" ref="brokerQuoteRequestSplitter" input-channel="broker-request-service-channel"
-                  output-channel="broker-request-router-channel" apply-sequence="true"/>
+    <int:channel id="broker-request-service-channel" datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+    <int:splitter id="requestSplitter"
+                  ref="brokerQuoteRequestSplitter"
+                  input-channel="broker-request-service-channel"
+                  output-channel="broker-request-router-channel"
+                  apply-sequence="true"/>
 
-    <int:channel id="broker-request-router-channel"/>
-
-    <int:recipient-list-router>
-        <int:recipient channel="broker-a" selector-expression="payload.getBrokerName().equalsIgnoreCase('BrokerA')"/>
-        <int:recipient channel="broker-b" selector-expression="payload.getBrokerName().equalsIgnoreCase('BrokerB')"/>
+    <int:channel id="broker-request-router-channel" datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+    <int:recipient-list-router id="brokerRequestRouter" input-channel="broker-request-router-channel">
+        <int:recipient channel="Xignite" selector-expression="payload.getBrokerName().equalsIgnoreCase('Xignite')"/>
+        <int:recipient channel="Bloomberg" selector-expression="payload.getBrokerName().equalsIgnoreCase('Bloomberg')"/>
     </int:recipient-list-router>
 
-    <int:channel id="broker-a"/>
-    <int:channel id="broker-b"/>
+    <!-- ################################################################################################### -->
+    <!-- ## Xignite processing. -->
+    <!-- ################################################################################################### -->
+    <int:channel id="Xignite" datatype="com.l8mdv.sa.BrokerQuoteRequestMessage">
+        <int:dispatcher task-executor="service-threads"/>
+    </int:channel>
+    <int:gateway id="xigniteGateway"
+                 async-executor="true"
+                 service-interface="com.l8mdv.sample.gateway.XigniteGateway"
+                 default-request-channel="xignite-processing"
+                 error-channel="fx-service-error-handler"/>
+    <int:channel id="xignite-processing"/>
+    <int:service-activator ref="xigniteProcessor"
+                           input-channel="xignite-processing"
+                           output-channel="xignite-prepare">
+        <constructor-arg name="xigniteGateway" ref="xXigniteGateway"/>
+    </int:service-activator>
+
+    <int:channel id="xignite-prepare" datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+    <int:chain id="request-preparation-channel">
+        <int:transformer ref="brokerRequestToXigniteRequestTransformer"/>
+        <int:transformer ref="xigniteResponseToBrokerResponseTransformer"/>
+        <!--<int:enricher request-payload-expression="payload.X"/>-->
+    </int:chain>
+
+    <!-- ################################################################################################### -->
+    <!-- ## Bloomberg processing. -->
+    <!-- ################################################################################################### -->
+    <int:channel id="Bloomberg" datatype="com.l8mdv.sa.BrokerQuoteRequestMessage">
+        <int:dispatcher task-executor="service-threads"/>
+    </int:channel>
+
+
+    <!-- ################################################################################################### -->
+    <!-- ## Error processing. -->
+    <!-- ################################################################################################### -->
+
+
+    <int:channel id="fx-service-error-handler"/>
+
+
 </beans>
