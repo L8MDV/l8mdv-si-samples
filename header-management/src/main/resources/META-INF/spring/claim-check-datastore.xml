@@ -7,13 +7,12 @@
        http://www.springframework.org/schema/integration
        http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
 
-    <bean id="simpleMessageStore"
-          class="org.springframework.integration.store.SimpleMessageStore"/>
-    <int:gateway id="claimCheckGateway"
-                 service-interface="com.l8mdv.sample.ClaimCheckGateway"/>
+    <!-- Change this to use a database or cache. -->
+    <bean id="simpleMessageStore" class="org.springframework.integration.store.SimpleMessageStore"/>
 
-    <int:chain input-channel="claim-check-in-channel"
-               output-channel="processing-channel">
+    <int:gateway id="claimCheckGateway" service-interface="com.l8mdv.sample.ClaimCheckGateway"/>
+
+    <int:chain input-channel="claim-check-in-channel" output-channel="processing-channel">
         <int:claim-check-in message-store="simpleMessageStore"/>
         <int:header-enricher>
             <int:header name="#{T(com.l8mdv.sample.ClaimCheckGateway).CLAIM_CHECK_ID}"
