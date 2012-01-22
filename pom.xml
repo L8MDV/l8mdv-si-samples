@@ -34,6 +34,8 @@
         <module>splitter-aggregator</module>
         <module>parallel-service-execution</module>
         <module>header-management</module>
+        <module>jpa-data-management</module>
+        <module>rabbitmq-intregration</module>
     </modules>
 
     <repositories>

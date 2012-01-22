@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/async-channels/async-channels.iml" filepath="$PROJECT_DIR$/async-channels/async-channels.iml" />
       <module fileurl="file://$PROJECT_DIR$/header-management/header-management.iml" filepath="$PROJECT_DIR$/header-management/header-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jpa-data-management/jpa-data-management.iml" filepath="$PROJECT_DIR$/jpa-data-management/jpa-data-management.iml" />
       <module fileurl="file://$PROJECT_DIR$/l8mdv-si-samples.iml" filepath="$PROJECT_DIR$/l8mdv-si-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/parallel-service-execution/parallel-service-execution.iml" filepath="$PROJECT_DIR$/parallel-service-execution/parallel-service-execution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-intregration/rabbitmq-intregration.iml" filepath="$PROJECT_DIR$/rabbitmq-intregration/rabbitmq-intregration.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample-messaging/sample-messaging.iml" filepath="$PROJECT_DIR$/sample-messaging/sample-messaging.iml" />
       <module fileurl="file://$PROJECT_DIR$/splitter-aggregator/splitter-aggregator.iml" filepath="$PROJECT_DIR$/splitter-aggregator/splitter-aggregator.iml" />
     </modules>

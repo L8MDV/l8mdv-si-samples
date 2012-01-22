@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
+
+    <bean id="simpleMessageStore" class="org.springframework.integration.store.SimpleMessageStore"/>
+    <int:gateway id="claimCheckGateway" service-interface="com.l8mdv.sample.ClaimCheckGateway"/>
+
+    <int:chain input-channel="claim-check-in-channel" output-channel="processing-channel">
+        <int:claim-check-in message-store="simpleMessageStore"/>
+        <int:header-enricher>
+            <int:header name="#{T(com.l8mdv.sample.ClaimCheckGateway).CLAIM_CHECK_ID}"
+                        expression="payload"/>
+        </int:header-enricher>
+    </int:chain>
+
+    <int:chain input-channel="processing-channel"
+               output-channel="claim-check-out-channel">
+        <int:service-activator expression="new String('different string')"/>
+    </int:chain>
+
+    <int:chain input-channel="claim-check-out-channel">
+        <int:transformer
+                expression="headers.get('#{T(com.l8mdv.sample.ClaimCheckGateway).CLAIM_CHECK_ID}')"/>
+        <int:claim-check-out message-store="simpleMessageStore"/>
+    </int:chain>
+
+</beans>

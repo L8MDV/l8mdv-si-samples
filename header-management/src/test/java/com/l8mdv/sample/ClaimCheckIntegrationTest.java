@@ -9,7 +9,7 @@ import org.springframework.integration.support.MessageBuilder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static com.l8mdv.sample.HeaderManagementGateway.REQUEST_PAYLOAD_HEADER_KEY;
+import static com.l8mdv.sample.ClaimCheckGateway.CLAIM_CHECK_ID;
 
 /**
  * Copyright Matt Vickery 2012
@@ -18,19 +18,20 @@ import static com.l8mdv.sample.HeaderManagementGateway.REQUEST_PAYLOAD_HEADER_KE
  * @since 21/01/2012
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:META-INF/spring/header-management.xml"})
-public class HeaderManagementIntegrationTest {
+@ContextConfiguration(
+    locations = {"classpath:META-INF/spring/claim-check.xml"}
+)
+public class ClaimCheckIntegrationTest {
 
-    @Autowired
-    HeaderManagementGateway headerManagementGateway;
+    @Autowired ClaimCheckGateway claimCheckGateway;
 
     @Test
     public void locatePayloadInHeader() {
         String payload = "Sample test message.";
         Message<String> message = MessageBuilder.withPayload(payload).build();
-        Message<String> response = headerManagementGateway.send(message);
+        Message<String> response = claimCheckGateway.send(message);
 
-        Assert.assertTrue(response.getHeaders()
-                .get(REQUEST_PAYLOAD_HEADER_KEY).equals(payload));
+        Assert.assertTrue(response.getPayload().equals(payload));
+        Assert.assertTrue(response.getHeaders().get(CLAIM_CHECK_ID) != null);
     }
 }

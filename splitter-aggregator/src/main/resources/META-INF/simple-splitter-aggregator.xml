@@ -84,4 +84,11 @@
     <int:channel id="fx-service-error-handler"/>
 
 
+     <int:channel id="claim-check-out-channel">
+        <int:interceptors>
+            <int:wire-tap channel="logger"/>
+        </int:interceptors>
+    </int:channel>
+    <int:logging-channel-adapter id="logger" level="DEBUG"/>
+
 </beans>
