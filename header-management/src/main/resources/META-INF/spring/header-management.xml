@@ -6,11 +6,16 @@
        http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
 
     <int:gateway id="headerManagementGateway" service-interface="com.l8mdv.sample.HeaderManagementGateway"/>
-    <int:chain input-channel="request-message-storage-channel">
+    <int:chain input-channel="request-message-storage-channel"
+               output-channel="request-message-retrieval-channel">
         <int:header-enricher>
             <int:header name="#{T(com.l8mdv.sample.HeaderManagementGateway).REQUEST_PAYLOAD_HEADER_KEY}"
                         expression="getPayload()"/>
         </int:header-enricher>
+    </int:chain>
+
+    <int:chain input-channel="request-message-retrieval-channel">
+        <int:transformer expression="headers.get(T(com.l8mdv.sample.HeaderManagementGateway).REQUEST_PAYLOAD_HEADER_KEY)"/>
     </int:chain>
 
 </beans>

@@ -33,4 +33,13 @@ public class HeaderManagementIntegrationTest {
         Assert.assertTrue(response.getHeaders()
                 .get(REQUEST_PAYLOAD_HEADER_KEY).equals(payload));
     }
+
+    @Test
+    public void locateTransformedPayload() {
+        String payload = "Sample test message.";
+        Message<String> message = MessageBuilder.withPayload(payload).build();
+        Message<String> response = headerManagementGateway.send(message);
+
+        Assert.assertTrue(response.getPayload().contains(payload));
+    }
 }

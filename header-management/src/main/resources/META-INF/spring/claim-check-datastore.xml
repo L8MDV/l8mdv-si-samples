@@ -25,10 +25,12 @@
         <int:service-activator expression="new String('different string')"/>
     </int:chain>
 
+    <int:channel id="claim-check-out-channel" datatype="java.lang.String"/>
     <int:chain input-channel="claim-check-out-channel">
         <int:transformer
                 expression="headers.get('#{T(com.l8mdv.sample.ClaimCheckGateway).CLAIM_CHECK_ID}')"/>
         <int:claim-check-out message-store="simpleMessageStore"/>
     </int:chain>
+
 
 </beans>
