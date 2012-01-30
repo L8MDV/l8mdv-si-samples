@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <int:gateway id="asynchChannelsGateway"
+                 default-request-channel="request-message-storage-channel"
+                 service-interface="com.l8mdv.sample.AsynchChannelsGateway"/>
+
+    <int:chain input-channel="request-message-storage-channel">
+        <int:header-enricher>
+            <int:header name="REQUEST_PAYLOAD_STORAGE" expression="message.getPayload"/>
+        </int:header-enricher>
+    </int:chain>
+
+</beans>

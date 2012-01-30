@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="brokerQuoteRequestSplitter" class="com.l8mdv.sample.service.BrokerQuoteRequestSplitter"/>
+
+    <!-- https://raw.github.com/currencybot/open-exchange-rates/master/latest.json -->
+    <!-- http://finance.yahoo.com/d/quotes.csv?e=.csv&f=sl1d1t1&s=USDINR=X -->
+
+    <int:transformer id="payloadStorage" expression="message.getPayload"/>
+</beans>

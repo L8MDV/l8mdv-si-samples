@@ -21,7 +21,8 @@
         </int:header-enricher>
     </int:chain>
 
-    <int:channel id="processing-channel" datatype="java.util.UUID, java.util.Map"/>
+    <int:channel id="processing-channel" datatype="java.util.Map"/>
+    <!--<int:channel id="processing-channel" datatype="java.util.UUID, java.util.Map"/>-->
     <int:chain input-channel="processing-channel"
                output-channel="claim-check-out-channel">
         <int:service-activator expression="new String('different string')"/>
