@@ -15,8 +15,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce97544e-a28f-45e6-9bee-e66b2051edb2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/impl/AggregationToBrokerQuoteResponseTransformer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/impl/BrokerRawResponseTransformer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/spring/bean-refs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/spring/simple-splitter-aggregator.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/splitter-aggregator/src/test/java/com/l8mdv/sample/SimpleSplitterAggregatorIntegrationTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/bean-refs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/splitter-aggregator/target/classes/META-INF/simple-splitter-aggregator.xml" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/spring/robust-splitter-aggregator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/claim-check.xml" afterPath="$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/claim-check.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd" afterPath="$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java" afterPath="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java" />
     </list>
     <ignored path="si-samples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,6 +65,58 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/HeaderManagementIntegrationTest.java" line="42" class="com.l8mdv.sample.HeaderManagementIntegrationTest" package="com.l8mdv.sample">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/impl/AggregationToBrokerQuoteResponseTransformer.java" line="18" class="com.l8mdv.sample.service.impl.AggregationToBrokerQuoteResponseTransformer" package="com.l8mdv.sample.service.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/splitter-aggregator/src/test/java/com/l8mdv/sample/SimpleSplitterAggregatorIntegrationTest.java" line="42" class="com.l8mdv.sample.SimpleSplitterAggregatorIntegrationTest" package="com.l8mdv.sample">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java" line="35" class="com.l8mdv.sample.service.BrokerQuoteRequestSplitter" package="com.l8mdv.sample.service">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ClaimCheckIntegrationTest.java" line="23" class="com.l8mdv.sample.ClaimCheckIntegrationTest" package="com.l8mdv.sample">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -106,46 +170,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="ScannerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ScannerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="49" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
+            <state line="27" column="28" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header-management.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/header-management.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="26" selection-start="897" selection-end="897" vertical-scroll-proportion="-3.8297873">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="claim-check.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/claim-check.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="16" selection-start="1125" selection-end="1405" vertical-scroll-proportion="0.82245433">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ClaimCheckIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ClaimCheckIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="16" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="23" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gateway-error-handling/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,22 +211,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/bean-refs.xml" />
-        <option value="$PROJECT_DIR$/async-channels/src/test/java/com/l8mdv/sample/AsynchChannelsGateway.java" />
-        <option value="$PROJECT_DIR$/async-channels/src/test/resources/async-channels.xml" />
-        <option value="$PROJECT_DIR$/header-management/src/main/java/com/l8mdv/sample/AsynchChannelsGateway.java" />
-        <option value="$PROJECT_DIR$/header-management/src/main/resources/header-management.xml" />
-        <option value="$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/config/xml/spring-integration-2.1.xsd" />
-        <option value="$PROJECT_DIR$/header-management/src/main/java/com/l8mdv/sample/HeaderManagementGateway.java" />
-        <option value="$PROJECT_DIR$/header-management/src/main/java/com/l8mdv/sample/ClaimCheckGateway.java" />
-        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml" />
-        <option value="$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ClaimCheckIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/HeaderManagementIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/header-management/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/header-management.xml" />
         <option value="$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/claim-check-datastore.xml" />
         <option value="$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/claim-check.xml" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/impl/BrokerRawResponseTransformer.java" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/bean-refs.xml" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml" />
+        <option value="$PROJECT_DIR$/sample-messaging/src/main/resources/messages.xsd" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/ServiceFaker.java" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/gateway/BrokerRequestGateway.java" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/test/java/com/l8mdv/sample/SimpleSplitterAggregatorIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/spring/simple-splitter-aggregator.xml" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/config/xml/spring-integration-2.1.xsd" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/spring/bean-refs.xml" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java" />
+        <option value="$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/impl/AggregationToBrokerQuoteResponseTransformer.java" />
+        <option value="$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ClaimCheckIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ScannerTest.java" />
       </list>
     </option>
   </component>
@@ -187,6 +234,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="/usr/share/java/maven-3.0.3" />
+        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -202,6 +250,30 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="sample-messaging" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="sample-messaging" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -302,9 +374,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -337,7 +406,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="header-management" />
+              <option name="myItemId" value="gateway-error-handling" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,7 +420,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="header-management" />
+              <option name="myItemId" value="gateway-error-handling" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -373,67 +442,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="header-management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sample" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="si-samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="l8mdv-si-samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="header-management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="si-samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="l8mdv-si-samples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="header-management" />
+              <option name="myItemId" value="gateway-error-handling" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -447,6 +456,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -480,125 +492,7 @@
       <recent name="com.l8mdv.sample.gateway" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClaimCheckIntegrationTest">
-    <configuration default="false" name="HeaderManagementIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false">
-        <pattern>
-          <option name="PATTERN" value="com.l8mdv.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="header-management" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.l8mdv.sample" />
-      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.HeaderManagementIntegrationTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="HeaderManagementIntegrationTest.main" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false">
-        <pattern>
-          <option name="PATTERN" value="com.l8mdv.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="header-management" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.l8mdv.sample" />
-      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.HeaderManagementIntegrationTest" />
-      <option name="METHOD_NAME" value="main" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="HeaderManagementIntegrationTest.numbers" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false">
-        <pattern>
-          <option name="PATTERN" value="com.l8mdv.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="header-management" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.l8mdv.sample" />
-      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.HeaderManagementIntegrationTest" />
-      <option name="METHOD_NAME" value="numbers" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ClaimCheckIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false">
-        <pattern>
-          <option name="PATTERN" value="com.l8mdv.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="header-management" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.l8mdv.sample" />
-      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.ClaimCheckIntegrationTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="64587" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ClaimCheckIntegrationTest.locatePayloadInHeader">
     <configuration default="false" name="HeaderManagementIntegrationTest.locateTransformedPayload" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false">
         <pattern>
@@ -631,6 +525,122 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SimpleSplitterAggregatorIntegrationTest.run" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false">
+        <pattern>
+          <option name="PATTERN" value="com.l8mdv.sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="splitter-aggregator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.l8mdv.sample" />
+      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.SimpleSplitterAggregatorIntegrationTest" />
+      <option name="METHOD_NAME" value="run" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59538" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClaimCheckIntegrationTest.scanner" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false">
+        <pattern>
+          <option name="PATTERN" value="com.l8mdv.sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="header-management" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.l8mdv.sample" />
+      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.ClaimCheckIntegrationTest" />
+      <option name="METHOD_NAME" value="scanner" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ScannerTest" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false">
+        <pattern>
+          <option name="PATTERN" value="com.l8mdv.sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.ScannerTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="header-management" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClaimCheckIntegrationTest.locatePayloadInHeader" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false">
+        <pattern>
+          <option name="PATTERN" value="com.l8mdv.sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="header-management" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.l8mdv.sample" />
+      <option name="MAIN_CLASS_NAME" value="com.l8mdv.sample.ClaimCheckIntegrationTest" />
+      <option name="METHOD_NAME" value="locatePayloadInHeader" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52923" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -817,12 +827,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Maven.splitter-aggregator [install]" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HeaderManagementIntegrationTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HeaderManagementIntegrationTest.main" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HeaderManagementIntegrationTest.numbers" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ClaimCheckIntegrationTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.HeaderManagementIntegrationTest.locateTransformedPayload" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.HeaderManagementIntegrationTest.locateTransformedPayload" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SimpleSplitterAggregatorIntegrationTest.run" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.splitter-aggregator [install]" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ClaimCheckIntegrationTest.scanner" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ScannerTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ClaimCheckIntegrationTest.locatePayloadInHeader" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -857,25 +867,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="802" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1344" height="802" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3991228" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16247304" sideWeight="0.67105263" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20273185" sideWeight="0.67105263" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24478765" sideWeight="0.60087717" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -966,109 +976,98 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/simple-splitter-aggregator.xml">
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/ServiceFaker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="4" selection-start="4863" selection-end="4863" vertical-scroll-proportion="0.9189189" />
+        <state line="21" column="11" selection-start="497" selection-end="497" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/util/MessagingMethodInvokerHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="13" selection-start="1910" selection-end="1910" vertical-scroll-proportion="-4.56" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/handler/MethodInvokingMessageProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="1265" selection-end="1265" vertical-scroll-proportion="-9.56" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/handler/AbstractMessageHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-10.56" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/config/xml/spring-integration-2.1.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2956" column="73" selection-start="114279" selection-end="114319" vertical-scroll-proportion="0.29736212" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/spring/bean-refs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="0" selection-end="1646" vertical-scroll-proportion="0.19582245" />
       </provider>
       <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jpa-data-management/pom.xml">
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/BrokerQuoteRequestSplitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="18" column="78" selection-start="0" selection-end="1156" vertical-scroll-proportion="0.1627907" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/async-channels/src/test/resources/async-channels.xml">
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/test/java/com/l8mdv/sample/SimpleSplitterAggregatorIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="362" selection-end="792" vertical-scroll-proportion="-0.6818182" />
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
+        <state line="41" column="34" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.54651165" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rabbitmq-integration/pom.xml">
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/java/com/l8mdv/sample/service/impl/AggregationToBrokerQuoteResponseTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="22" column="16" selection-start="0" selection-end="1006" vertical-scroll-proportion="0.76744187" />
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.0.5.RELEASE/spring-test-3.0.5.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/handler/AbstractReplyProducingMessageHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="177" selection-end="177" vertical-scroll-proportion="0.15306123" />
+        <state line="24" column="25" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.3137755" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.8.jar!/org/junit/Assert.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/transformer/MessageTransformingHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="147" selection-end="147" vertical-scroll-proportion="0.15306123" />
+        <state line="14" column="31" selection-start="687" selection-end="687" vertical-scroll-proportion="0.4814815" />
       </provider>
     </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/junit/junit/4.0/junit-4.0.pom">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/integration/spring-integration-core/2.1.0.RELEASE/spring-integration-core-2.1.0.RELEASE.jar!/org/springframework/integration/transformer/AbstractMessageProcessingTransformer.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="12" column="60" selection-start="786" selection-end="786" vertical-scroll-proportion="0.42091838" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header-management/pom.xml">
+    <entry file="file://$PROJECT_DIR$/splitter-aggregator/src/main/resources/META-INF/spring/simple-splitter-aggregator.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="500" selection-end="500" vertical-scroll-proportion="0.38372093" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header-management/src/main/java/com/l8mdv/sample/ClaimCheckGateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="83" selection-start="0" selection-end="357" vertical-scroll-proportion="0.1744186" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header-management/src/main/java/com/l8mdv/sample/HeaderManagementGateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="90" selection-start="0" selection-end="396" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/claim-check-datastore.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="77" selection-start="1339" selection-end="1410" vertical-scroll-proportion="0.5483029" />
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/HeaderManagementIntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="50" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="49" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/header-management.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="897" selection-end="897" vertical-scroll-proportion="-3.8297873">
+        <state line="24" column="14" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.59210527">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ScannerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="28" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/header-management/src/test/java/com/l8mdv/sample/ClaimCheckIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header-management/src/main/resources/META-INF/spring/claim-check.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="16" selection-start="1125" selection-end="1405" vertical-scroll-proportion="0.82245433">
+        <state line="23" column="0" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-error-handling/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

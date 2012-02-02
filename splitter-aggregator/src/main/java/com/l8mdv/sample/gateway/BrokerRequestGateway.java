@@ -1,9 +1,10 @@
 package com.l8mdv.sample.gateway;
 
 
-import com.l8mdv.sa.BrokerQuoteRequestMessage;
 import com.l8mdv.sa.BrokerQuoteResponseMessage;
+import com.l8mdv.sa.BrokerRequestMessage;
 import com.l8mdv.sample.exception.BrokerException;
+import org.springframework.integration.annotation.Gateway;
 
 /**
  * Copyright Matt Vickery 2012
@@ -13,5 +14,6 @@ import com.l8mdv.sample.exception.BrokerException;
  */
 public interface BrokerRequestGateway {
 
-    public BrokerQuoteResponseMessage send(BrokerQuoteRequestMessage message) throws BrokerException;
+    @Gateway (requestChannel = "broker-request-channel")
+    public BrokerQuoteResponseMessage send(BrokerRequestMessage message) throws BrokerException;
 }

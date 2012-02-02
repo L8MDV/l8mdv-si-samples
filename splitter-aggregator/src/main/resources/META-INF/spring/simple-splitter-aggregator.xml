@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration
+       http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
+
+    <!--##############################################-->
+    <!-- Bean specifications.  -->
+    <!--##############################################-->
+    <import resource="bean-refs.xml"/>
+
+    <!--##############################################-->
+    <!-- Gateway specification. -->
+    <!--##############################################-->
+    <int:gateway service-interface="com.l8mdv.sample.gateway.BrokerRequestGateway"/>
+    <int:channel id="broker-request-channel"
+                 datatype="com.l8mdv.sa.BrokerRequestMessage"/>
+
+    <!--##############################################-->
+    <!-- Request message splitter. -->
+    <!--##############################################-->
+    <int:splitter input-channel="broker-request-channel"
+                  output-channel="broker-router-channel"
+                  ref="brokerQuoteRequestSplitter"/>
+
+    <!--##############################################-->
+    <!-- Request message routing. -->
+    <!--##############################################-->
+    <int:channel id="broker-router-channel"
+                 datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+    <int:recipient-list-router input-channel="broker-router-channel">
+        <int:recipient channel="openex-broker-channel"
+                       selector-expression="payload.BrokerName.equals('openex')"/>
+        <int:recipient channel="yahoo-broker-channel"
+                       selector-expression="payload.BrokerName.equals('yahoo')"/>
+    </int:recipient-list-router>
+
+    <!--##############################################-->
+    <!-- Request message routing to OpenEx. -->
+    <!--##############################################-->
+    <int:channel id="openex-broker-channel" datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+    <int:chain input-channel="openex-broker-channel"
+               output-channel="aggregator-channel">
+        <int:service-activator>
+            <bean id="OpenExServiceFaker" class="com.l8mdv.sample.ServiceFaker">
+                <constructor-arg name="response" ref="OpenExFakeResponseData"/>
+            </bean>
+        </int:service-activator>
+    </int:chain>
+
+    <!--##############################################-->
+    <!-- Request message routing to Yahoo. -->
+    <!--##############################################-->
+    <int:channel id="yahoo-broker-channel"
+                 datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+    <int:chain input-channel="yahoo-broker-channel"
+               output-channel="aggregator-channel">
+        <int:service-activator>
+            <bean id="YahooServiceFaker" class="com.l8mdv.sample.ServiceFaker">
+                <constructor-arg name="response" ref="YahooFakeResponseData"/>
+            </bean>
+        </int:service-activator>
+    </int:chain>
+
+    <!--##############################################-->
+    <!-- Response message handling, return the best -->
+    <!-- quote to the invoker. -->
+    <!--##############################################-->
+    <int:channel id="aggregator-channel" datatype="com.l8mdv.sa.BrokerQuoteResponseMessage"/>
+    <int:chain input-channel="aggregator-channel">
+        <int:aggregator/>
+        <int:transformer ref="aggregationToBrokerQuoteResponseTransformer"/>
+    </int:chain>
+
+</beans>

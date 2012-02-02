@@ -30,7 +30,9 @@
                  default-request-timeout="8000"
                  default-reply-timeout="8000"/>
 
-    <int:channel id="broker-request-service-channel" datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+    <int:channel id="broker-request-service-channel"
+                 datatype="com.l8mdv.sa.BrokerQuoteRequestMessage"/>
+
     <int:splitter id="requestSplitter"
                   ref="brokerQuoteRequestSplitter"
                   input-channel="broker-request-service-channel"

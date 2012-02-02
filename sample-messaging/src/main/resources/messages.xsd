@@ -3,10 +3,34 @@
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://l8mdv.com/sa">
 
+    <xsd:element name="BrokerRequestMessage" type="BrokerRequestMessage"/>
+    <xsd:element name="BrokerResponseMessage" type="BrokerResponseMessage"/>
+
     <xsd:element name="BrokerQuoteRequestMessage" type="BrokerQuoteRequestMessage"/>
     <xsd:element name="BrokerQuoteResponseMessage" type="BrokerQuoteResponseMessage"/>
 
-     <xsd:complexType name="BrokerQuoteRequestMessage">
+    <xsd:complexType name="BrokerRequestMessage">
+        <xsd:sequence minOccurs="2" maxOccurs="20" id="xx">
+            <xsd:element name="BrokerRequest" type="BrokerRequest"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="BrokerRequest">
+        <xsd:sequence>
+            <xsd:element name="BrokerName" type="xsd:string"/>
+            <xsd:element name="BrokerRequestType" type="BrokerRequestType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="BrokerResponseMessage">
+        <xsd:all>
+            <xsd:element name="BrokerRequestType" type="BrokerRequestType"/>
+            <xsd:element name="BrokerName" type="xsd:string"/>
+            <xsd:element name="Value" type="xsd:integer"/>
+        </xsd:all>
+    </xsd:complexType>
+
+    <xsd:complexType name="BrokerQuoteRequestMessage">
         <xsd:complexContent>
             <xsd:extension base="FxQuoteRequestMessage">
                 <xsd:all>
@@ -48,6 +72,14 @@
         <xsd:restriction base="xsd:normalizedString">
             <xsd:enumeration value="SELL-LOWEST"/>
             <xsd:enumeration value="BUY-LOWEST"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="BrokerRequestType">
+        <xsd:restriction base="xsd:normalizedString">
+            <xsd:enumeration value="QUOTE"/>
+            <xsd:enumeration value="BUY"/>
+            <xsd:enumeration value="SELL"/>
         </xsd:restriction>
     </xsd:simpleType>
 

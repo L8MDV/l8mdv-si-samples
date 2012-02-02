@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/async-channels/async-channels.iml" filepath="$PROJECT_DIR$/async-channels/async-channels.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-error-handling/gateway-error-handling.iml" filepath="$PROJECT_DIR$/gateway-error-handling/gateway-error-handling.iml" />
       <module fileurl="file://$PROJECT_DIR$/header-management/header-management.iml" filepath="$PROJECT_DIR$/header-management/header-management.iml" />
       <module fileurl="file://$PROJECT_DIR$/jpa-data-management/jpa-data-management.iml" filepath="$PROJECT_DIR$/jpa-data-management/jpa-data-management.iml" />
       <module fileurl="file://$PROJECT_DIR$/l8mdv-si-samples.iml" filepath="$PROJECT_DIR$/l8mdv-si-samples.iml" />

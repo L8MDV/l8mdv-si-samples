@@ -54,6 +54,7 @@
         <module>header-management</module>
         <module>jpa-data-management</module>
         <module>rabbitmq-integration</module>
+        <module>gateway-error-handling</module>
     </modules>
 
     <repositories>
