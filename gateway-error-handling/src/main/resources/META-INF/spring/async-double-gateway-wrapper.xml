@@ -7,51 +7,19 @@
        http://www.springframework.org/schema/integration
        http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
 
-    <!--####################################################################################################-->
-    <!---->
-    <!-- Support beans. -->
-    <!---->
-    <!--####################################################################################################-->
-    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
-        <property name="corePoolSize" value="1"/>
-        <property name="maxPoolSize" value="1"/>
-        <property name="queueCapacity" value="1"/>
-    </bean>
-    <bean id="gatewayTestingGatewayAdapter" class="com.l8mdv.sample.TimeoutAndExceptionHandlingGatewayWrapper"/>
-    <int:message-history/>
+    <import resource="common-beans.xml"/>
+    <import resource="enrollment-service.xml"/>
 
-    <!-- Logging infrastructure. -->
-    <int:channel id="gateway-response-channel">
-        <int:interceptors>
-            <int:wire-tap channel="logging-channel"/>
-        </int:interceptors>
-    </int:channel>
-    <int:logging-channel-adapter id="logging-channel" level="INFO" log-full-message="true"/>
+    <int:gateway id="enrollmentServiceGateway"
+                 service-interface="com.l8mdv.sample.EnrollmentServiceGateway"
+                 default-request-channel="gateway-request-channel"/>
 
-    <!--####################################################################################################-->
-    <!---->
-    <!-- Ordinary gateway processing. -->
-    <!---->
-    <!--####################################################################################################-->
-    <int:gateway id="gatewayTestingGateway" service-interface="com.l8mdv.sample.GatewayTestingGateway"
-                 default-request-channel="timeout-handling-channel"/>
-    <int:channel id="timeout-handling-channel"/>
-    <int:service-activator input-channel="timeout-handling-channel" ref="gatewayTestingGatewayAdapter"/>
-
-    <int:gateway id="timeoutHandlingGateway"
-                 service-interface="com.l8mdv.sample.GatewayTestingGateway"
-                 default-request-channel="gateway-request-channel"
-                 default-reply-channel="gateway-response-channel"
-                 default-request-timeout="2000"
-                 default-reply-timeout="2000"/>
-
-    <int:channel id="gateway-request-channel">
-        <int:dispatcher task-executor="taskExecutor"/>
-    </int:channel>
-
-    <int:service-activator id="sleeperService" input-channel="gateway-request-channel">
-        <bean class="com.l8mdv.sample.SleeperService"/>
+    <!-- This service activator has the adapted gateway injected as a bean and
+    calls the adapted gateway from within the service method directly. -->
+    <int:service-activator id="enrollmentServiceGatewayHandler" input-channel="gateway-request-channel">
+        <bean class="com.l8mdv.sample.EnrollmentServiceGatewayHandler">
+            <constructor-arg name="enrollmentServiceAdaptedGateway" ref="enrollmentServiceAdaptedGateway"/>
+        </bean>
     </int:service-activator>
-
 
 </beans>

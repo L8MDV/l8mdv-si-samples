@@ -21,9 +21,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 )
 public class AsyncGatewaySaWrapperIntegrationTest {
 
-    Logger logger = LoggerFactory.getLogger(AsyncGatewaySaWrapperIntegrationTest.class);
+    private Logger logger = LoggerFactory.getLogger(AsyncGatewaySaWrapperIntegrationTest.class);
+
     @Autowired
-    EnrollmentServiceGateway enrollmentServiceGateway;
+    private EnrollmentServiceGatewayHandler enrollmentServiceGateway;
 
     @Test
     public void requestTimeGreaterThanTimeout() throws Exception {

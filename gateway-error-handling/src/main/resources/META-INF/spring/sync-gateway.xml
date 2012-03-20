@@ -7,20 +7,18 @@
        http://www.springframework.org/schema/integration
        http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
 
-    <int:gateway id="gatewayTestingGateway"
-            service-interface="com.l8mdv.sample.GatewayTestingGateway"
+    <import resource="common-beans.xml"/>
+
+    <int:gateway id="enrollmentServiceGateway"
+            service-interface="com.l8mdv.sample.EnrollmentServiceGateway"
             default-request-channel="gateway-request-channel"
+            default-reply-channel="gateway-response-channel"
             default-request-timeout="3000"
             default-reply-timeout="3000"/>
 
-    <int:service-activator id="knappingService" input-channel="gateway-request-channel">
-        <bean class="com.l8mdv.sample.KnapperService">
-            <constructor-arg name="knapProperties">
-                <map>
-                    <entry key="#{T(com.l8mdv.sample.KnapperService).KNAP_TIME}" value="5"/>
-                </map>
-            </constructor-arg>
-        </bean>
-    </int:service-activator>
+    <int:service-activator id="sleeperService"
+                           input-channel="gateway-request-channel"
+                           output-channel="gateway-response-channel"
+                           ref="sleeper"/>
 
 </beans>

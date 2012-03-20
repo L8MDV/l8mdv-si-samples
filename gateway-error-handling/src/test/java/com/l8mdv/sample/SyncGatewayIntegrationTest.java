@@ -3,6 +3,8 @@ package com.l8mdv.sample;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -20,8 +22,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 )
 public class SyncGatewayIntegrationTest {
 
+    private Logger logger = LoggerFactory.getLogger(SyncGatewayIntegrationTest.class);
+
     @Autowired
-    EnrollmentServiceGateway enrollmentServiceGateway;
+    private EnrollmentServiceGateway enrollmentServiceGateway;
 
     @Test
     public void requestTimeGreaterThanTimeout() throws Exception {
@@ -32,9 +36,9 @@ public class SyncGatewayIntegrationTest {
          * of the request message. Had the gateway timeout been active, a
          * null would have been returned.
          */
-        String knapPeriod = "5";
-        String response = enrollmentServiceGateway.send(knapPeriod);
-        Assert.assertTrue(response.equals(knapPeriod));
+        String sleepPeriod = "5";
+        String response = enrollmentServiceGateway.send(sleepPeriod);
+        Assert.assertTrue(response.equals(sleepPeriod));
     }
 
     @Test
@@ -44,8 +48,8 @@ public class SyncGatewayIntegrationTest {
          * The fact that the "1" is returned (and is shorter than the gateway
          * timeout) means that the method completed successfully.
          */
-        String knapPeriod = "1";
-        String response = enrollmentServiceGateway.send(knapPeriod);
-        Assert.assertTrue(response.equals(knapPeriod));
+        String sleepPeriod = "1";
+        String response = enrollmentServiceGateway.send(sleepPeriod);
+        Assert.assertTrue(response.equals(sleepPeriod));
     }
 }

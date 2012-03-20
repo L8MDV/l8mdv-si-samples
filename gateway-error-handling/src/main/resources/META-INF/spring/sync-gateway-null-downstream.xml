@@ -13,10 +13,16 @@
             service-interface="com.l8mdv.sample.EnrollmentServiceGateway"
             default-request-channel="gateway-request-channel"
             default-reply-channel="gateway-response-channel"
-            default-request-timeout="3000"
             default-reply-timeout="3000"/>
 
-    <int:service-activator id="sleeperService" input-channel="gateway-request-channel"
-                           output-channel="gateway-response-channel" ref="sleeper"/>
+    <int:service-activator id="sleeperService"
+                           input-channel="gateway-request-channel"
+                           output-channel="nulling-response-channel"
+                           ref="sleeper"/>
+
+    <int:service-activator input-channel="nulling-response-channel"
+                     output-channel="gateway-response-channel">
+        <bean class="com.l8mdv.sample.NullReturner"/>
+    </int:service-activator>
 
 </beans>

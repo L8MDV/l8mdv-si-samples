@@ -7,24 +7,16 @@
        http://www.springframework.org/schema/integration
        http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
 
-    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
-        <property name="corePoolSize" value="5"/>
-        <property name="maxPoolSize" value="10"/>
-        <property name="queueCapacity" value="25"/>
+    <import resource="common-beans.xml"/>
+    <import resource="enrollment-service.xml"/>
+
+    <bean id="enrollmentServiceGatewayHandler" class="com.l8mdv.sample.EnrollmentServiceGatewayHandler">
+        <constructor-arg name="enrollmentServiceAdaptedGateway" ref="enrollmentServiceAdaptedGateway"/>
     </bean>
 
-    <int:gateway id="gatewayTestingGateway"
-                 service-interface="com.l8mdv.sample.GatewayTestingGateway"
-                 default-request-channel="gateway-request-channel"
-                 default-request-timeout="2000"
-                 default-reply-timeout="2000"/>
-
-    <int:channel id="gateway-request-channel">
-        <int:dispatcher task-executor="taskExecutor"/>
-    </int:channel>
-
-    <int:service-activator id="knappingService" input-channel="gateway-request-channel">
-        <bean class="com.l8mdv.sample.KnapperService"/>
-    </int:service-activator>
+    <int:service-activator id="enrollmentServiceGateway"
+                           input-channel="gateway-request-channel"
+                           ref="enrollmentServiceGatewayHandler"
+                           requires-reply="true"/>
 
 </beans>

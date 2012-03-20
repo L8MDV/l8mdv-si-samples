@@ -1,6 +1,7 @@
 package com.l8mdv.sample;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -18,7 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-    locations = {"classpath:META-INF/spring/sync-gateway.xml"}
+    locations = {"classpath:META-INF/spring/sync-gateway-null-downstream.xml"}
 )
 public class SyncGatewayNullDownstreamIntegrationTest {
 
@@ -27,29 +28,13 @@ public class SyncGatewayNullDownstreamIntegrationTest {
     @Autowired
     private EnrollmentServiceGateway enrollmentServiceGateway;
 
+    @Ignore
     @Test
     public void requestTimeGreaterThanTimeout() throws Exception {
 
-        /**
-         * Because the gateway timeout is not observed in a synchronous
-         * request pattern, the Service Activator will reflect the contents
-         * of the request message. Had the gateway timeout been active, a
-         * null would have been returned.
-         */
-        String sleepPeriod = "5";
+        String sleepPeriod = "3";
         String response = enrollmentServiceGateway.send(sleepPeriod);
         Assert.assertTrue(response.equals(sleepPeriod));
     }
 
-    @Test
-    public void requestTimeLessThanTimeout() throws Exception {
-
-        /**
-         * The fact that the "1" is returned (and is shorter than the gateway
-         * timeout) means that the method completed successfully.
-         */
-        String sleepPeriod = "1";
-        String response = enrollmentServiceGateway.send(sleepPeriod);
-        Assert.assertTrue(response.equals(sleepPeriod));
-    }
 }

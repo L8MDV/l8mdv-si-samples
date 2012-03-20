@@ -20,19 +20,19 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class AsyncGatewayIntegrationTest {
 
     @Autowired
-    EnrollmentServiceGateway enrollmentServiceGateway;
+    private EnrollmentServiceGateway enrollmentServiceGateway;
 
     @Test
     public void requestTimeGreaterThanTimeout() throws Exception {
-        String knapPeriod = "5";
-        String response = enrollmentServiceGateway.send(knapPeriod);
+        String sleepPeriod = "25";
+        String response = enrollmentServiceGateway.send(sleepPeriod);
         org.junit.Assert.assertTrue(response == null);
     }
 
     @Test
     public void requestTimeLessThanTimeout() throws Exception {
-        String knapPeriod = "1";
-        String response = enrollmentServiceGateway.send(knapPeriod);
-        org.junit.Assert.assertTrue(response.equals(knapPeriod));
+        String sleepPeriod = "1";
+        String response = enrollmentServiceGateway.send(sleepPeriod);
+        org.junit.Assert.assertTrue(response.equals(sleepPeriod));
     }
 }

@@ -7,31 +7,20 @@
        http://www.springframework.org/schema/integration
        http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
 
-    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
-        <property name="corePoolSize" value="5"/>
-        <property name="maxPoolSize" value="10"/>
-        <property name="queueCapacity" value="25"/>
-    </bean>
+    <import resource="common-beans.xml"/>
 
-    <int:gateway id="gatewayTestingGateway"
-                 service-interface="com.l8mdv.sample.GatewayTestingGateway"
+    <int:gateway id="enrollmentServiceGateway"
+                 service-interface="com.l8mdv.sample.EnrollmentServiceGateway"
                  default-request-channel="gateway-request-channel"
-                 default-request-timeout="3000"
-                 default-reply-timeout="3000"/>
+                 default-reply-channel="gateway-response-channel"
+                 default-reply-timeout="2000"/>
 
     <int:channel id="gateway-request-channel">
         <int:dispatcher task-executor="taskExecutor"/>
     </int:channel>
-
-    <int:service-activator id="knappingService" input-channel="gateway-request-channel">
-        <bean class="com.l8mdv.sample.KnapperService">
-            <constructor-arg name="knapProperties">
-                <map>
-                    <entry key="#{T(com.l8mdv.sample.KnapperService).KNAP_TIME}" value="5"/>
-                </map>
-            </constructor-arg>
-        </bean>
-    </int:service-activator>
-
+    <int:service-activator id="sleeperService"
+                           input-channel="gateway-request-channel"
+                           output-channel="gateway-response-channel"
+                           ref="sleeper"/>
 
 </beans>

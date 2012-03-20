@@ -1,5 +1,7 @@
 package com.l8mdv.sample;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Copyright Matt Vickery 2012
@@ -10,6 +12,7 @@ package com.l8mdv.sample;
 public class SleeperService {
 
     public static final String INTERRUPTED_DURING_SERVICE_CALL = "interrupted during service call";
+    public final Logger logger = LoggerFactory.getLogger(getClass());
 
     public String service(String message) {
 
@@ -21,6 +24,8 @@ public class SleeperService {
         } catch (Exception e) {
             Thread.interrupted();
             return INTERRUPTED_DURING_SERVICE_CALL;
+        } finally {
+            logger.info("Destruction....");
         }
     }
 }

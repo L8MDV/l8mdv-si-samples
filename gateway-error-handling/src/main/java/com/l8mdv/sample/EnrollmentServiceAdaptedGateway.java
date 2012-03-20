@@ -6,6 +6,6 @@ package com.l8mdv.sample;
  * @author matt.d.vickery@gmail.com
  * @since 02/02/2012
  */
-public interface EnrollmentServiceAdaptedGateway extends GatewayTestingGateway {
+public interface EnrollmentServiceAdaptedGateway extends EnrollmentServiceGateway {
     public String send(String payload);
 }
