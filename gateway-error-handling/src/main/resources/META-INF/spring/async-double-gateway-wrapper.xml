@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration
+       http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
+
+    <!--####################################################################################################-->
+    <!---->
+    <!-- Support beans. -->
+    <!---->
+    <!--####################################################################################################-->
+    <bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="1"/>
+        <property name="maxPoolSize" value="1"/>
+        <property name="queueCapacity" value="1"/>
+    </bean>
+    <bean id="gatewayTestingGatewayAdapter" class="com.l8mdv.sample.TimeoutAndExceptionHandlingGatewayWrapper"/>
+    <int:message-history/>
+
+    <!-- Logging infrastructure. -->
+    <int:channel id="gateway-response-channel">
+        <int:interceptors>
+            <int:wire-tap channel="logging-channel"/>
+        </int:interceptors>
+    </int:channel>
+    <int:logging-channel-adapter id="logging-channel" level="INFO" log-full-message="true"/>
+
+    <!--####################################################################################################-->
+    <!---->
+    <!-- Ordinary gateway processing. -->
+    <!---->
+    <!--####################################################################################################-->
+    <int:gateway id="gatewayTestingGateway" service-interface="com.l8mdv.sample.GatewayTestingGateway"
+                 default-request-channel="timeout-handling-channel"/>
+    <int:channel id="timeout-handling-channel"/>
+    <int:service-activator input-channel="timeout-handling-channel" ref="gatewayTestingGatewayAdapter"/>
+
+    <int:gateway id="timeoutHandlingGateway"
+                 service-interface="com.l8mdv.sample.GatewayTestingGateway"
+                 default-request-channel="gateway-request-channel"
+                 default-reply-channel="gateway-response-channel"
+                 default-request-timeout="2000"
+                 default-reply-timeout="2000"/>
+
+    <int:channel id="gateway-request-channel">
+        <int:dispatcher task-executor="taskExecutor"/>
+    </int:channel>
+
+    <int:service-activator id="sleeperService" input-channel="gateway-request-channel">
+        <bean class="com.l8mdv.sample.SleeperService"/>
+    </int:service-activator>
+
+
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:enrollment-service="http://com.l8mdv.sample/schema/enrollment"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration
+       http://www.springframework.org/schema/integration/spring-integration-2.1.xsd
+       http://com.l8mdv.sample/schema/enrollment
+       http://com.l8mdv.sample/schema/enrollment/EnrollmentService.xsd">
+
+    <import resource="common-beans.xml"/>
+
+    <int:gateway id="enrollmentServiceAdaptedGateway"
+                 service-interface="com.l8mdv.sample.EnrollmentServiceAdaptedGateway"
+                 default-request-channel="adapted-gateway-request-channel"
+                 default-request-timeout="2000"
+                 default-reply-timeout="2000"/>
+
+    <int:channel id="adapted-gateway-request-channel" datatype="java.lang.String">
+        <int:dispatcher task-executor="taskExecutor"/>
+    </int:channel>
+    <int:service-activator id="sleeperService" input-channel="adapted-gateway-request-channel">
+        <bean class="com.l8mdv.sample.SleeperService"/>
+    </int:service-activator>
+
+</beans>
