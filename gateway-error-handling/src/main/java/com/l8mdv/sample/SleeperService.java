@@ -16,10 +16,10 @@ public class SleeperService {
 
     public String service(String message) {
 
-        System.out.println("Going into wait...");
+        logger.info("Going into wait..");
         try {
             Thread.sleep(Long.parseLong(message)*1000);
-            System.out.println("\n\n...waited");
+            logger.info("..waited");
             return message;
         } catch (Exception e) {
             Thread.interrupted();
