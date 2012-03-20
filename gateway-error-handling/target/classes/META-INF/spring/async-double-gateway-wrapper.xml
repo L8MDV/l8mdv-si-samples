@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration
+       http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
+
+    <import resource="common-beans.xml"/>
+    <import resource="enrollment-service.xml"/>
+
+    <int:gateway id="enrollmentServiceGateway"
+                 service-interface="com.l8mdv.sample.EnrollmentServiceGateway"
+                 default-request-channel="gateway-request-channel"/>
+
+    <!-- This service activator has the adapted gateway injected as a bean and
+    calls the adapted gateway from within the service method directly. -->
+    <int:service-activator id="enrollmentServiceGatewayHandler" input-channel="gateway-request-channel">
+        <bean class="com.l8mdv.sample.EnrollmentServiceGatewayHandler">
+            <constructor-arg name="enrollmentServiceAdaptedGateway" ref="enrollmentServiceAdaptedGateway"/>
+        </bean>
+    </int:service-activator>
+
+</beans>

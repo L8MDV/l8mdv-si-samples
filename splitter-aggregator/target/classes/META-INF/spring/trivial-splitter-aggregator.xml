@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/integration
+       http://www.springframework.org/schema/integration/spring-integration-2.1.xsd">
+
+
+    <int:gateway default-request-channel="gateway-request-channel"/>
+	
+	<int:channel id="gateway-request-channel"/>
+	<int:splitter input-channel="gateway-request-channel" output-channel="routing-channel"/>
+
+    <int:channel id="routing-channel"/>
+    <int:recipient-list-router input-channel="routing-channel">
+        <int:recipient channel="broker-a-channel" selector-expression="payload.equals('broker-a')"/>
+        <int:recipient channel="broker-b-channel" selector-expression="payload.equals('broker-b')"/>
+    </int:recipient-list-router>
+
+    <int:channel id="broker-a-channel"/>
+	<int:service-activator input-channel="broker-a-channel" output-channel="aggregator-channel"/>
+
+    <int:channel id="broker-b-channel"/>
+    <int:service-activator input-channel="broker-b-channel" output-channel="aggregator-channel"/>
+
+    <int:channel id="aggregator-channel"/>
+    <int:aggregator input-channel="aggregator-channel"/>
+
+    <int:aggregator/>
+</beans>
