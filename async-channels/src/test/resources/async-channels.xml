@@ -4,14 +4,18 @@
        xmlns:int="http://www.springframework.org/schema/integration"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <import resource="beans.xml"/>
+
+    <int:channel id="request-message-storage-channel"/>
+
     <int:gateway id="asynchChannelsGateway"
                  default-request-channel="request-message-storage-channel"
                  service-interface="com.l8mdv.sample.AsynchChannelsGateway"/>
 
-    <int:chain input-channel="request-message-storage-channel">
-        <int:header-enricher>
-            <int:header name="REQUEST_PAYLOAD_STORAGE" expression="message.getPayload"/>
-        </int:header-enricher>
+    <int:channel id="gateway-request-channel"/>
+    <int:chain input-channel="gateway-request-channel" output-channel="gateway-response-channel">
+        <int:service-activator ref="messageCleaner"/>
     </int:chain>
+    <int:channel id="gateway-response-channel"/>
 
 </beans>
